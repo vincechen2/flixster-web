@@ -43,4 +43,4 @@ Deployed Application (optional): [Flixster Deployed Site](https://vincechen2.git
 ### Walkthrough Video
 
 
-![Screen_Recording_2022-05-15_at_6_48_50_PM_AdobeCreativeCloudExpress-3](https://user-images.githubusercontent.com/68205883/168497635-70fe9f87-ebdd-4d34-ba31-9aee674cca15.gif)
+![ezgif com-gif-maker-15](https://user-images.githubusercontent.com/68205883/168497895-d9efc7cf-ebe8-4e8b-8111-223de6a02412.gif)
