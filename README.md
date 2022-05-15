@@ -41,7 +41,5 @@ Deployed Application (optional): [Flixster Deployed Site](https://vincechen2.git
 - [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
+![Screen_Recording_2022-05-15_at_6_48_50_PM_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/68205883/168497438-77de7f5d-4c16-44fb-b326-333588e7dda0.gif)
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
