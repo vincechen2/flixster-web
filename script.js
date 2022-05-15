@@ -1,5 +1,5 @@
 const api_key = "6bf83e4a21816576aa2473bc47239ace";
-let i = 0;
+let page = 0;
 window.onload = async function () {
   await load();
 };
@@ -64,7 +64,46 @@ document.getElementById("search").addEventListener("keyup", (e) => {
       console.log(err);
     });
 });
+function video(data) {
+  console.log(data);
+  let id = data.id;
+  fetch(
+    "https://api.themoviedb.org/3/movie/" +
+      id +
+      "/videos?api_key=" +
+      api_key +
+      "&language=en-US"
+  ).then((res) => {
+    res.json().then((res) => {
+      let url = "https://www.youtube.com/embed/";
+      let x = document.createElement("iframe");
+      x.width = "560";
+      x.height = "315";
+      x.title = "YouTube video player";
+      x.frameborder = "0";
+      x.allow = "autoplay";
 
+      if (res.results.length > 0) {
+      }
+      for (let i = 0; i < res.results.length; i++) {
+        if (res.results[i].type === "Trailer") {
+          url += res.results[i].key;
+          break;
+        }
+      }
+
+      x.id = "trailer";
+
+      url += "?autoplay=1";
+      x.src = url;
+      console.log(url);
+      let inner = document.getElementById("inner");
+      let backdropElement = document.getElementById("poster");
+      inner.replaceChild(x, backdropElement);
+      console.log(res);
+    });
+  });
+}
 function load() {
   let root = document.getElementById("root");
   let wrap = document.createElement("div");
@@ -83,13 +122,7 @@ function load() {
   getMovies();
 }
 function displayDetails(data) {
-  let s = document.getElementsByClassName("movie-poster");
-  for (i = 0; i < s.length; i++) {
-    s[i].classList.add("no-hover");
-  }
-  console.log(data);
   let id = data.id;
-
   fetch(
     "https://api.themoviedb.org/3/movie/" + id + "?api_key=" + api_key
   ).then((res) => {
@@ -128,28 +161,36 @@ function displayDetails(data) {
       votes.innerHTML = data.vote_average + "⭐️";
       date.innerHTML = data.release_date + " | ";
       summary.innerHTML = data.overview;
+      backdropElement.onclick = () => video(data);
     });
   });
 }
 function closeDetails() {
-  let s = document.getElementsByClassName("movie-poster");
-  for (i = 0; i < s.length; i++) {
-    s[i].classList.remove("no-hover");
+  let t = document.getElementById("trailer");
+  if (t) {
+    console.log("foo");
+    let y = document.createElement("img");
+    y.id = "poster";
+    y.className = "movie-backdrop";
+    let inner = document.getElementById("inner");
+    inner.replaceChild(y, t);
   }
+
   document.getElementById("close-btn").remove();
   let container = document.getElementById("details");
   container.className = "";
+
   let inner = document.getElementById("inner");
   inner.className = "hidden";
   document.body.style.overflow = "auto";
 }
 function getMovies() {
-  i++;
+  page++;
   fetch(
     "https://api.themoviedb.org/3/movie/now_playing?api_key=" +
       api_key +
       "&language=en-US&page=" +
-      i,
+      page,
     {
       method: "GET",
     }
