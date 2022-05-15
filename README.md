@@ -41,5 +41,6 @@ Deployed Application (optional): [Flixster Deployed Site](https://vincechen2.git
 - [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
-![Screen_Recording_2022-05-15_at_6_48_50_PM_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/68205883/168497438-77de7f5d-4c16-44fb-b326-333588e7dda0.gif)
+
+![Screen_Recording_2022-05-15_at_6_48_50_PM_AdobeCreativeCloudExpress-2](https://user-images.githubusercontent.com/68205883/168497510-5e96049a-9655-4954-b404-b84190439e4b.gif)
 
