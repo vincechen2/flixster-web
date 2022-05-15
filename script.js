@@ -17,6 +17,7 @@ document.getElementById("search").addEventListener("keyup", (e) => {
   if (e.key !== "Enter") {
     return;
   }
+  console.log(e.target.value);
   let s = e.target.value;
   e.target.value = "";
   fetch(
@@ -31,7 +32,7 @@ document.getElementById("search").addEventListener("keyup", (e) => {
         for (let i = 0; i < data.results.length; i++) {
           let title = data.results[i].title;
           let votes = data.results[i].vote_average;
-
+          console.log("foo");
           let poster =
             "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
 
