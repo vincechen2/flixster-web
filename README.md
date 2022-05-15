@@ -42,5 +42,6 @@ Deployed Application (optional): [Flixster Deployed Site](https://vincechen2.git
 
 ### Walkthrough Video
 
+![ezgif com-gif-maker-16](https://user-images.githubusercontent.com/68205883/168497989-9a2bd5a1-a313-495d-88bc-f847803c1925.gif)
 
-![ezgif com-gif-maker-15](https://user-images.githubusercontent.com/68205883/168497895-d9efc7cf-ebe8-4e8b-8111-223de6a02412.gif)
+
