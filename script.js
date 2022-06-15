@@ -10,6 +10,7 @@ document.getElementById("close-search-btn").addEventListener("click", () => {
   }
   let searchRoot = document.getElementById("searchroot");
   searchRoot.className = "hidden";
+
   let root = document.getElementById("root");
   root.className = "";
 });
@@ -17,7 +18,11 @@ document.getElementById("search").addEventListener("keyup", (e) => {
   if (e.key !== "Enter") {
     return;
   }
-  console.log(e.target.value);
+  let sc = document.getElementById("searchcontent");
+  while (sc.firstChild) {
+    sc.removeChild(sc.lastChild);
+  }
+
   let s = e.target.value;
   e.target.value = "";
   fetch(
@@ -32,7 +37,7 @@ document.getElementById("search").addEventListener("keyup", (e) => {
         for (let i = 0; i < data.results.length; i++) {
           let title = data.results[i].title;
           let votes = data.results[i].vote_average;
-          console.log("foo");
+
           let poster =
             "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
 
@@ -66,7 +71,6 @@ document.getElementById("search").addEventListener("keyup", (e) => {
     });
 });
 function video(data) {
-  console.log(data);
   let id = data.id;
   fetch(
     "https://api.themoviedb.org/3/movie/" +
@@ -97,11 +101,10 @@ function video(data) {
 
       url += "?autoplay=1";
       x.src = url;
-      console.log(url);
+
       let inner = document.getElementById("inner");
       let backdropElement = document.getElementById("poster");
       inner.replaceChild(x, backdropElement);
-      console.log(res);
     });
   });
 }
@@ -123,12 +126,15 @@ function load() {
   getMovies();
 }
 function displayDetails(data) {
+  let poster = document.querySelector(".movie-card .movie-poster:hover");
+  console.log(poster);
+  poster.className = "hidden2";
+
   let id = data.id;
   fetch(
     "https://api.themoviedb.org/3/movie/" + id + "?api_key=" + api_key
   ).then((res) => {
     res.json().then((res) => {
-      console.log(res);
       let button = document.createElement("button");
       let container = document.getElementById("details");
       let inner = document.getElementById("inner");
@@ -167,9 +173,10 @@ function displayDetails(data) {
   });
 }
 function closeDetails() {
+  let poster = document.querySelector(".hidden2");
+  poster.className = "movie-poster";
   let t = document.getElementById("trailer");
   if (t) {
-    console.log("foo");
     let y = document.createElement("img");
     y.id = "poster";
     y.className = "movie-backdrop";

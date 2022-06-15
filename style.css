@@ -11,6 +11,10 @@ body {
 #searchroot {
   padding: 0 2rem;
 }
+#root {
+  width: 90%;
+  margin: 0 auto;
+}
 .header {
   width: 100%;
   height: 80px;
@@ -31,7 +35,7 @@ body {
 }
 
 .header .navbar {
-  max-width: 1200px;
+  width: 90%;
   margin: 0px auto;
   padding: 0 20px;
   height: 80px;
@@ -128,10 +132,9 @@ body {
 }
 
 .movie-list {
-  padding-inline: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
 }
 
 .movie-card {
@@ -311,6 +314,9 @@ body {
 
 /** Utility classes **/
 .hidden {
+  display: none;
+}
+.hidden2 {
   display: none;
 }
 
