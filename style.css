@@ -209,6 +209,7 @@ body {
   width: 100%;
   display: block;
   opacity: 1;
+  cursor: pointer;
 }
 
 .movie-popup .movie-details {
