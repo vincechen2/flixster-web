@@ -1,10 +1,9 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
 
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: Vincent Chen
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **3** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](https://vincechen2.github.io/flixster-web/)
 
@@ -42,6 +41,6 @@ Deployed Application (optional): [Flixster Deployed Site](https://vincechen2.git
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+![ezgif com-gif-maker-16](https://user-images.githubusercontent.com/68205883/168497989-9a2bd5a1-a313-495d-88bc-f847803c1925.gif)
 
-`ADD_EMBEDDED_CODE_HERE`
+
